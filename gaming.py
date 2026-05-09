@@ -37,7 +37,7 @@ class GachaSimulator:
             character = random.choice(self.pool_5_star_std)
             self.guarantee_5_star = True   # 歪了，下次是大保底
             
-        print(f"⭐⭐⭐⭐⭐ 恭喜你，抽到五星角色【{character}】！")
+        print(f"恭喜你，抽到五星角色【{character}】！")
         self.pity_5_star = 0
         self.num_fivestar += 1
         # 注意：米哈游游戏的机制中，出5星不重置4星保底计数，所以不改动 pity_4_star
@@ -50,14 +50,14 @@ class GachaSimulator:
             character = random.choice(self.pool_4_star_std)
             self.guarantee_4_star = True
             
-        print(f"⭐⭐⭐⭐ 获得四星角色【{character}】！")
+        print(f"获得四星角色【{character}】！")
         self.pity_4_star = 0  # 重置四星保底
         self.pity_5_star += 1
         self.num_fourstar += 1
 
     def pull_3_star(self):
         item = random.choice(self.pool_3_star)
-        print(f"⭐⭐⭐ 获得三星物品【{item}】")
+        print(f"获得三星物品【{item}】")
         self.pity_4_star += 1
         self.pity_5_star += 1
 
@@ -89,7 +89,7 @@ class GachaSimulator:
 
     def show_statistics(self):
         print("\n" + "="*30)
-        print("🎮 抽卡结束 🎮")
+        print("抽卡结束")
         print(f"共抽卡: {self.total_pulls} 次")
         print(f"五星总数: {self.num_fivestar} 个")
         print(f"四星总数: {self.num_fourstar} 个")
