@@ -5,5 +5,5 @@ This repository contains a Genshin gacha simulator, just for fun.
 
 ```sh
 cd gacha-simulator
-python 抽卡软件.py
+python gaming.py
 ```
